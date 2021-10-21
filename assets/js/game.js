@@ -1,15 +1,26 @@
 var employeePassword = window.prompt("Please create a password.");
-console.log(employeePassword);
-console.log("This logs a string, good for leaving yourself a message");
-// this will do math and log 20
-console.log(10 + 10);
-// what is this?
-console.log("Our password is " + employeePassword);
+var employeePasswordMaxCharacters = 128;
+var employeePasswordMinCharacters = 8;
 
-// this creates a function named "generate"
+// You can also log multiple values at once like this
+console.log(employeePassword, employeePasswordMinCharacters, employeePasswordMaxCharacters);
 
-function generate() {
-    window.alert("A password has been generated.");
-}
+var generate = function() {
+    // Alert employee that they are generating a password
+    window.alert("Welcome to the Password Generator!");
 
-// generate();
+    // Log a resulting message to the console so we know that it worked.
+    console.log(
+        employeePassword + " created"
+    );
+
+    // check password length
+    if (employeePassword < 8) {
+        window.alert(employeePassword + " is too short.");
+    }
+    else {
+        window.alert(employeePassword + " created ");
+    }
+};
+
+generate();
