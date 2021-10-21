@@ -1,5 +1,9 @@
 document.getElementById("submit").onclick = function() {generatePassword()};
 
 function generatePassword() {
-    document.getElementById("submit").innerHTML = "YOU CLICKED ME!";
+    var password = prompt("Please select criteria: length, lowercase, uppercase, numeric, special characters");
+    if (password != null) {
+        document.getElementById("submit").innerHTML = 
+        "You selected " + password;
+    }
 }
